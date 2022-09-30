@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Admin Panel";
+}
+
+<h1>Admin Panel</h1>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <table class="table">
+        <tr>
+            <th>
+                <a href="/AdminPanel/ChangeRole">Change Role</a>
+            </th>
+            <th>
+                <a href="/AdminPanel/DeleteEmployee">Delete Employee</a>
+            </th>
+        </tr>
+    </table>
+}

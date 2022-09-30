@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <table class="table">
+        <tr>
+            <th>
+                <a href="/Account/Login">Login</a>
+            </th>
+            <th>
+                <a href="/Account/Register">Register</a>
+            </th>
+            <th>
+                <a href="/Account/ChangePassword">Change Password</a>
+            </th>
+            <th>
+                <a href="/Account/ForgotPassword">Forgot Password</a>
+            </th>
+        </tr>
+    </table>
+}

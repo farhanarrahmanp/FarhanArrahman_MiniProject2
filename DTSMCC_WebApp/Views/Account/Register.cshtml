@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+
+<p>
+    <a asp-action="Index"><= Back</a>
+</p>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <table class="table">
+        <tr>
+            <th>
+                Full Name
+            </th>
+            <td>
+                <input type="text" id="FullName" name="FullName">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Email
+            </th>
+            <td>
+                <input type="email" id="Email" name="Email">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Password
+            </th>
+            <td>
+                <input type="password" id="Password" name="Password">
+            </td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>
+                <input type="submit" value="Register">
+            </td>
+        </tr>
+    </table>
+}

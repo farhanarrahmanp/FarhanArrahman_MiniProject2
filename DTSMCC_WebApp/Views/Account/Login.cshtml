@@ -1,0 +1,45 @@
+﻿@*<form method="post" asp-action="Login">*@
+<!--<form method="post">
+    <input name="email" />
+    <input name="password" />
+    <button type="submit">Login</button>
+</form>-->
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+<p>
+    <a asp-action="Index"><= Back</a>
+</p>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <table class="table">
+        <tr>
+            <th>
+                Email
+            </th>
+            <td>
+                <input type="email" id="Email" name="Email">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Password
+            </th>
+            <td>
+                <input type="password" id="Password" name="Password">
+            </td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>
+                <input type="submit" value="Login">
+            </td>
+        </tr>
+    </table>
+}
